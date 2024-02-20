@@ -1,0 +1,57 @@
+/* Login.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    color: #002E63;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 25px;
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 1px; 
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px; 
+    margin-top: 5px;
+}
+
+button {
+    background-color: #f65446;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+button:last-child {
+    margin-right: 0; 
+}
+
