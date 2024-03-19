@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import Login from './Login';
+import Signup from './Signup';
 
 const HomePage = () => {
   const [boxSize, setBoxSize] = useState({ width: '90vm', height: 'auto' });
   const [isLoginOpen, setLoginOpen] = useState(false);
+  const [isSignUpOpen, setSignUpOpen] = useState(false);
 
   const handleResize = () => {
     setBoxSize({
@@ -29,6 +31,13 @@ const HomePage = () => {
   const closeLogin = () => {
     setLoginOpen(false);
   };
+  const openSignup = () => {
+    setSignUpOpen(true);
+  };
+
+  const closeSignup = () => {
+    setSignUpOpen(false);
+  };
   return (
     <div>
       <header style={headerStyle}>
@@ -37,7 +46,7 @@ const HomePage = () => {
         </div>
         <div style={rightStyle}>
           <h2 onClick={openLogin} style={{ fontSize: '20px', fontFamily: "'Aclonica', sans-serif"}}>Log in</h2>
-          <button className="signup-button">Sign Up</button>
+          <button onClick={openSignup} className="signup-button">Sign Up</button>
         </div>
       </header>
       <div className="img-container" style={boxSize}>
@@ -67,6 +76,7 @@ const HomePage = () => {
         </div>
       </div>
       {isLoginOpen && <Login onClose={closeLogin} />}
+      {isSignUpOpen && <Signup onClose={closeSignup} />}
     </div>
   );
 };
